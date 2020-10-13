@@ -1,0 +1,14 @@
+[Unit]
+Description=Shinobi Tensorflow Plugin
+Documentation=https://shinobi.video/
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/shinobi/plugins/tensorflow
+ExecStart=/usr/bin/node shinobi-tensorflow.js
+Restart=always
+RestartSec=500ms
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target
